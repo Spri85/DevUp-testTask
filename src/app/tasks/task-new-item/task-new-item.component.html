@@ -1,0 +1,35 @@
+<div class="container" @fade>
+  <h3>Add New Task</h3>
+  <form [formGroup]="addTaskForm" (ngSubmit)="onSubmit(addTaskForm.value)">
+    <div class="form-group">
+      <label for="taskInputName">Name</label>
+      <input formControlName="name" type="text" class="form-control" id="taskInputName">
+      <div class="alert alert-danger" *ngIf="name.hasError('required') && name.touched">
+        Task name is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="taskInputDescription">Description</label>
+      <textarea formControlName="description" class="form-control" id="taskInputDescription" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="taskSelectStatus">Status</label>
+      <select
+        formControlName="status"
+        class="form-control"
+        id="taskSelectStatus"
+      >
+        <option disabled></option>
+        <option  *ngFor="let status of taskTypes">{{status}}</option>
+      </select>
+      <div class="alert alert-danger" *ngIf="status.hasError('required') && status.touched">
+        Task status is required
+      </div>
+    </div>
+    <div class="float-right">
+      <a routerLink="/" class="btn btn-danger active">Cancel</a>
+      <button [disabled]="addTaskForm.invalid" type="submit" class="btn btn-success">Save</button>
+    </div>
+  </form>
+</div>

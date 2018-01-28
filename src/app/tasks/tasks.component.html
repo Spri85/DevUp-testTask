@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-4" *ngFor="let taskType of taskTypes">
+      <div class="dropableList" [dragOverClass]="'drag-border'" droppable
+           (onDrop)="onTaskDrop($event.dragData, taskType)">
+        <h3>{{taskType}}</h3>
+        <ul   class="list-group" *ngFor="let task of tasks">
+          <app-task-item
+            *ngIf="task.status === taskType"
+            (onRemoveTask)="removeTask($event)"
+            [task]="task"
+          ></app-task-item>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

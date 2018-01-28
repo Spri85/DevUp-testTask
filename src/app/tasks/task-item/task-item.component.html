@@ -1,0 +1,8 @@
+<li draggable [dragData]="task"  class="list-group-item d-flex justify-content-between align-items-center" [routerLink]="['/task', task.id]">
+    <div >
+      {{task.name}}
+    </div>
+    <button class="btn btn-outline-danger" (click)="removeTask(task.id)">X</button>
+
+</li>
+
