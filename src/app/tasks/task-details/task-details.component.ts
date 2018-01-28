@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {TaskService} from '../../services/task.service';
 import {Task} from '../../models/Item.model';
 import {ActivatedRoute, Router} from '@angular/router';
-import {fadeStateTrigger} from '../../anumations';
+import {fadeStateTrigger} from '../../animations';
 
 
 @Component({

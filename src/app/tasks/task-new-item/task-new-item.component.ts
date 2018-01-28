@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {TaskService} from '../../services/task.service';
 import {Task} from '../../models/Item.model';
 import {Router} from '@angular/router';
-import {fadeStateTrigger} from '../../anumations';
+import {fadeStateTrigger} from '../../animations';
 
 @Component({
   selector: 'app-task-new-item',

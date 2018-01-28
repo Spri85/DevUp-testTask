@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {fadeStateTrigger} from '../anumations';
+import {fadeStateTrigger} from '../animations';
 
 @Component({
   selector: 'app-dashboard',
