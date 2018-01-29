@@ -14,9 +14,9 @@ import {fadeStateTrigger} from '../../animations';
   ]
 })
 export class TaskDetailsComponent implements OnInit {
-  private currentTask: Task;
-  private currentId: number;
-  private  types: string[];
+  currentTask: Task;
+  currentId: number;
+  types: string[];
 
   constructor(
     public taskService: TaskService,
